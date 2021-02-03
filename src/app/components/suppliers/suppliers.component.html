@@ -1,0 +1,21 @@
+<div class="suppliers-container common-margin">
+    <div class="container">
+        <div class="suppliers-header bold">
+            <span class="suppliers-header-item col m4">Water Supplier</span>
+            <span class="suppliers-header-item col shide m4">Description</span>
+            <span class="suppliers-header-item col shide m4">Water Comparison</span>
+        </div>
+        <div class="suppliers-body" *ngFor="let supplierInfo of (more ? suppliersInfo : (suppliersInfo|slice:0:4))">
+            <div class="suppliers-body-item">
+                <div class="suppliers-type col m4 s12">
+                    <img src="{{supplierInfo.logo}}" />
+                </div>
+                <div class="suppliers-desc normal-text col m4 s12">{{supplierInfo.description}}</div>
+                <div class="suppliers-comparison bold col m4 s12">Request a quote</div>
+            </div>
+        </div>
+        <div class="supplier-show-hide" (click)="more = !more">
+            <span>{{ more ? 'Show less suppliers' : 'Show all suppliers' }}<span class="supplier-show-hide-icon">{{ more ? ' -' : ' +' }}</span></span>
+        </div>
+    </div>
+</div>

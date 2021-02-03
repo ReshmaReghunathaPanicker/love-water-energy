@@ -1,0 +1,55 @@
+@import '../../../assets/styles/common.scss';
+
+.request-quote-container {
+    background-color: $bg-secondary;
+    padding: 40px 35px;
+    color: $fc-light;
+    .request-quote-heading {
+        margin-bottom: 20px;
+    }
+    .request-quote-notes {
+        a {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    input {
+        width: 100%;
+        padding: 15px 20px;
+        margin: 8px 0px;
+        display: inline-block;
+        border-radius: 2px;
+        box-sizing: border-box;
+        border: none;
+    }
+    button {
+        width: 100%;
+        position: relative;
+        background-color: $bg-tertiary;
+        color: $fc-light;
+        padding: 18px 20px;
+        margin: 18px 0px 8px 0px;
+        border: none;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+    .disabled {
+        cursor: default;
+    }
+    .disabled::before {
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        opacity: .5;
+    }
+    .request-quote-success {
+        padding: 22px 0px;
+        color: $fc-success;
+    }
+}
+  

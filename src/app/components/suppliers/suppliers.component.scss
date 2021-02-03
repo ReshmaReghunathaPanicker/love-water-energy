@@ -1,0 +1,73 @@
+@import '../../../assets/styles/common.scss';
+.suppliers-container {
+    .suppliers-header {
+        background: $bg-header-secondary;
+        height: 60px;
+        color: $fc-light;
+        padding: 20px 0px;
+        span {
+            text-align: center;
+        }
+    }
+    .suppliers-body:nth-child(odd) {
+        background-color: $bg-primary;
+    }
+    .suppliers-body {
+        .suppliers-body-item div {
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .suppliers-body-item {
+            overflow: hidden;
+            font-size: 14px;
+            text-align: center;
+            .suppliers-type {
+                border-right: 2px solid $border-color-primary;
+                img {
+                    max-width: 115px;
+                }
+            }
+            .suppliers-comparison {
+                color: $fc-red;
+                text-decoration: underline;
+                height: 70px;
+            }
+            .suppliers-desc {
+                border-right: 2px solid $border-color-primary;
+                height: 70px;
+                padding: 10px;
+            }
+        }
+    }
+    .supplier-show-hide {
+        height: 45px;
+        color: $fc-light;
+        border-radius: 4px;;
+        background-color: $bg-footer-secondary;
+        text-align: center;
+        padding: 12px 0px;
+        font-size: 16px;
+        cursor: pointer;
+        .supplier-show-hide-icon {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-device-width: 768px) 
+ and (min-device-width: 200px){
+    .suppliers-container {
+        .suppliers-body {
+            .suppliers-body-item div:not(:last-child) {
+                border-right: none;
+            }
+            .suppliers-body-item {
+                .suppliers-comparison, .suppliers-desc {
+                    height: 40px;
+                }
+            }
+        }
+    }    
+}

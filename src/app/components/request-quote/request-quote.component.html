@@ -1,0 +1,23 @@
+<div class="request-quote-container">
+    <div class="request-quote-heading xxl-text bold">Request a quote</div>
+    <form #quoteForm="ngForm" (ngSubmit)="submit(quoteForm)">
+
+        <input type="text" id="name" name="fullname" required ngModel #fullName="ngModel" placeholder="Name *">
+        
+        <input type="text" id="phone-number" [pattern]="phNumberPattern" required ngModel #phoneNumber="ngModel" name="phonenumber" placeholder="Phone Number *">
+        <div class="error xs-text" *ngIf="phoneNumber.errors?.pattern">
+            Invalid Phone number
+        </div>
+
+        <input type="text" id="email-id" [pattern]="emailPattern" required ngModel #emailId="ngModel" name="emailid" placeholder="Email Address *">
+        <div class="error xs-text" *ngIf="emailId.errors?.pattern">
+            Invalid email address
+        </div>
+
+        <button *ngIf="!showSuccessMsg" class="request-quote-submit bold" type="submit" [class.disabled]="!quoteForm.valid" [disabled]="!quoteForm.valid">SUBMIT</button>
+        <div class="request-quote-success" *ngIf="showSuccessMsg">Thanks, we will contact you!</div>
+        
+    </form>
+    <div class="request-quote-notes xs-text">By submitting your details, you are agreeing to Love Energy Savings 
+        <a>terms & conditions</a>. For more information please visit our <a>privacy policy</a>.</div>
+</div>

@@ -1,0 +1,19 @@
+<div class="benefits-tab-container common-margin">
+  <div class="container benefits-tab-inner">
+    <div class="benefits-tab-block" *ngFor="let benefitsDetail of benefitsDetails">
+      <div [class.active]="selectedDetails == benefitsDetail" class="benefits-tab-name bold col m3 s12" (click)="selectedDetails = benefitsDetail">
+        <span class="benefits-tab-name-content">{{benefitsDetail.tabName}}</span> 
+        <span class="benefits-tab-name-icon">{{ selectedDetails == benefitsDetail ? ' -' : ' +' }} </span>
+      </div>
+      
+      <div class="benefits-tab-body col m9 s12" *ngIf="selectedDetails == benefitsDetail">
+        <div class="benefits-tab-para-block" *ngFor="let paragraphe of benefitsDetail.paragraphes">
+          <div class="benefits-tab-para normal-text">{{paragraphe}}</div>
+        </div>
+        <ul class="benefits-tab-lists-block" *ngFor="let list of benefitsDetail.lists">
+          <li class="normal-text">{{list}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

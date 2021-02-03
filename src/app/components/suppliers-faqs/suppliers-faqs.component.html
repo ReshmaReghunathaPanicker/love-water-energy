@@ -1,0 +1,12 @@
+<div class="suppliers-faqs-container common-margin">
+    <div class="container">
+        <div class="suppliers-faqs-header xxl-text bold">Switching business water supplier FAQs</div>
+        <div class="suppliers-faqs-item" *ngFor="let suppliersFaq of suppliersFaqs">
+            <div class="suppliers-faqs-item-header" (click)="selectedFaq == suppliersFaq ? selectedFaq = {} : selectedFaq = suppliersFaq">
+                <div class="suppliers-faqs-item-header-title bold-text">{{suppliersFaq.question}}</div>
+                <span class="suppliers-faqs-item-header-icon">{{ selectedFaq == suppliersFaq ? ' -' : ' +' }}</span>
+            </div>
+            <div  [class.show-details]="selectedFaq == suppliersFaq" class="suppliers-faqs-item-body hide-details normal-text">{{suppliersFaq.answer}}</div>
+        </div>
+    </div>
+</div>

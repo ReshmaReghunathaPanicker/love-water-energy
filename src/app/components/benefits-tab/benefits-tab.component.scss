@@ -1,0 +1,98 @@
+@import '../../../assets/styles/common.scss';
+.benefits-tab-container {
+  position: relative;
+  .benefits-tab-inner {
+    position: relative;
+  }
+  .benefits-tab-block {
+    overflow: hidden;
+    .benefits-tab-body {
+      position: absolute;
+      right: 0;
+      top: 0;
+      border: 1px solid $border-color-secondary;
+      border-left: none;
+      height: 270px;
+      padding: 25px 25px;
+      margin-bottom: 0px;
+      .benefits-tab-para {
+        margin-bottom: 8px;
+      }
+      .benefits-tab-lists-block {
+        padding: 0px 14px;
+        margin: 10px 0px;
+      }
+    }
+    .benefits-tab-name {
+      margin-bottom: 0px;
+      border: 1px solid $border-color-tertiary;
+      border-right: 1px solid $border-color-secondary;
+      background-color: $border-color-secondary;
+      color: $fc-light;
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      .benefits-tab-name-icon {
+        display: none;
+      }
+    }
+    .benefits-tab-name.active {
+      color: $fc-tertiary;
+      background-color: $bg-light;
+      border: 1px solid $border-color-secondary;
+      border-right: 1px solid $border-color-tertiary;
+    }
+  }
+  
+}
+
+@media (max-device-width: 768px) 
+ and (min-device-width: 200px){   
+  .benefits-tab-container {
+    position: relative;
+    .benefits-tab-block {
+      .benefits-tab-name {
+        margin-bottom: 10px;
+        border: none;
+        padding: 20px 15px;
+        height: 60px;
+        display: block;
+        .benefits-tab-name-icon {
+          float: right;
+          display: block;
+        }
+      }
+      .benefits-tab-name.active {
+        margin-bottom: 0px;
+        border: 1px solid $border-color-secondary;
+        border-bottom: 1px solid $border-color-tertiary;
+      }
+      .benefits-tab-body {
+        position: relative;
+        padding: 0px 15px 15px 15px;
+        height: auto;
+        border: 1px solid $border-color-secondary;
+        border-top: none;
+        margin-bottom: 10px;
+      }
+    }
+  }  
+}
+
+@media (max-device-width: 993px) 
+ and (min-device-width: 768px){ 
+  .benefits-tab-container {
+    .benefits-tab-block {
+      .benefits-tab-body {
+        height: 299px;
+      }
+      .benefits-tab-name { 
+        height: 100px;
+      }
+    }
+  }
+}
+
+    

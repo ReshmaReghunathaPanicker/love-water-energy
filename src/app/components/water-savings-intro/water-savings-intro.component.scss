@@ -1,0 +1,42 @@
+@import '../../../assets/styles/common.scss';
+.water-savings-intro-container {
+    background-image: linear-gradient($main-banner-gradient1 , $main-banner-gradient2);
+    overflow: auto;
+    .water-savings-intro-left-block {
+        padding-right: 70px;
+    }
+    .water-savings-intro-title {
+        color: $fc-tertiary;
+        margin: 35px 0px 25px 0px;
+    }
+    .water-savings-intro-desc {
+        margin-bottom: 18px;
+    }
+    .water-savings-intro-content {
+        margin-bottom: 15px;
+    }
+    .water-savings-intro-logo {
+        margin: 30px 0px;
+        .water-logo {
+            width: 150px;
+            margin-right: 40px;
+        }
+        .pilot-logo {
+            width: 100px;
+        }
+    }
+}
+@media (max-device-width: 768px) 
+ and (min-device-width: 200px){
+    .water-savings-intro-container {
+        .container {
+            padding: 0px;
+        }
+        .water-savings-intro-left-block {
+            padding: 10px 20px;
+        }
+        .water-savings-intro-title {
+            margin: 20px 0px 20px 0px;
+        }
+    }
+ }

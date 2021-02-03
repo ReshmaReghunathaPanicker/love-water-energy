@@ -1,0 +1,23 @@
+@import '../../../assets/styles/common.scss';
+.dashboard-wrapper {
+    .enquire-now-container {
+        display: none;
+    }
+}
+@media (max-device-width: 769px) 
+ and (min-device-width: 200px) {
+    .dashboard-wrapper {
+        .enquire-now-container {
+            display: block;
+            height: 55px;
+            color: $fc-light;
+            border-radius: 4px;;
+            background-color: $bg-footer-secondary;
+            text-align: center;
+            padding: 18px 0px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px 10px 0px 10px;
+        }
+    }
+}

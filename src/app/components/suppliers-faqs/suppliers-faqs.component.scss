@@ -1,0 +1,42 @@
+@import '../../../assets/styles/common.scss';
+.suppliers-faqs-container {
+    margin-bottom: 30px;
+    .suppliers-faqs-header {
+        color: $fc-tertiary;
+        padding-bottom: 25px;
+        text-align: center;
+        border-bottom: 1px solid $border-color-primary;
+    }
+    .suppliers-faqs-item {
+        border-bottom: 1px solid $border-color-primary;
+        .suppliers-faqs-item-header {
+            box-sizing: border-box;
+            padding: 15px 0px;
+            overflow: hidden;
+            .suppliers-faqs-item-header-title {
+                max-width: 85%;
+                float: left;
+            }
+            .suppliers-faqs-item-header-icon {
+                float: right;
+                color: $fc-tertiary;
+                font-size: 42px;
+                position: relative;
+                bottom: 16px;
+                padding-right: 5px;
+                height: 20px;
+            }
+        }
+        .suppliers-faqs-item-body {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .hide-details {
+            display: none;
+        }
+        .show-details {
+            display: block;
+        }
+    }
+    
+}

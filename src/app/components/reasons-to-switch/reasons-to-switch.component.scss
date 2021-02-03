@@ -1,0 +1,77 @@
+@import '../../../assets/styles/common.scss';
+.reasons-to-switch-container {
+  .reasons-to-switch-header {
+    color: $fc-tertiary;
+    padding-bottom: 25px;
+    text-align: center;
+  }
+  .reasons-to-switch-body {
+    display: flex;
+  }
+  .reasons-to-switch-block:not(:last-child) {
+    padding-right: 10px;
+  }
+  .next-prev {
+    display: none;
+  }
+  .reasons-to-switch-block {
+    display: flex;
+    flex-grow: 1;
+    .reasons-to-switch-inner {
+      text-align: center;
+      padding: 25px;
+      background-color: $bg-primary;
+      min-height: 190px;
+      .reasons-to-switch-logo img {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+      }
+      .reasons-to-switch-title {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+@media (max-device-width: 769px) 
+ and (min-device-width: 200px) {
+  .reasons-to-switch-container {
+    .reasons-to-switch-body {
+      position: relative;
+      overflow: hidden;
+      .reasons-to-switch-block {
+        display: none;
+        padding: 0px;
+        .reasons-to-switch-inner {
+          width: 80%;
+          margin: auto;
+        }
+      }
+      .reasons-to-switch-block.active {
+        display: block;
+      }
+      .next-prev {
+        display: block;
+        position: absolute;
+        top: 37%;
+        height: 30px;
+        width: 30px;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+      .reasons-to-switch-next {
+        right: 0;
+        background-image: url("../../../assets/images/icons/next-icon.png");
+      }
+      .reasons-to-switch-prev {
+        left: 0;
+        background-image: url("../../../assets/images/icons/next-icon.png");
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+

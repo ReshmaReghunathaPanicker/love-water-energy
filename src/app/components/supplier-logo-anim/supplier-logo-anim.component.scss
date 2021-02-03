@@ -1,0 +1,51 @@
+@import '../../../assets/styles/common.scss';
+
+.supplier-logo-anim-container {
+   .supplier-logo-anim-inner {
+		$min-image-size: 50px;
+		$max-image-size: 100px;
+		--image-size: #{$max-image-size};
+		padding: 20px;
+		overflow: hidden;
+		width: 100%;
+		margin: 0 auto;	
+		position: relative;
+		display: flex;
+		&:hover {
+			div {
+				animation-play-state: paused;
+			}
+		}	
+		.supplier-logo-block { 
+			display: flex;
+			position: relative;
+			animation: marquee 15s linear infinite;
+			justify-content: space-around;
+		}	
+		.supplier-logo-image {
+			display: block;
+			margin: 0 25px;
+			height: 50px;
+		}
+		&:after {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+		}
+	
+		@media (max-width:900px) {
+		--image-size: #{$min-image-size};
+		--image-size: min(max(#{$min-image-size}, 10vw), #{$max-image-size});
+		}
+   	}
+}
+@keyframes marquee {
+	0%   { transform: translateX(0%); }
+	100% { transform: translateX(-100%); }
+}
+
+
+

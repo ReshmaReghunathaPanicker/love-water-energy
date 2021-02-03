@@ -1,0 +1,16 @@
+<div class="reasons-to-switch-container common-margin">
+  <div class="container">
+    <div class="reasons-to-switch-header xxl-text bold">Here’s some of the reasons why you should switch your water supply</div>
+    <div class="reasons-to-switch-body">
+      <div [class.active]="selectedDataIndex == i" class="reasons-to-switch-block col m3 s12" *ngFor="let reasonsToSwitchData of reasonsToSwitchDatas; let i = index">
+        <div class="reasons-to-switch-inner">
+          <div class="reasons-to-switch-logo"><img src="{{reasonsToSwitchData.logo}}"></div>
+          <div class="reasons-to-switch-title bold-text">{{reasonsToSwitchData.title}}</div>
+          <div class="reasons-to-switch-description normal-text">{{reasonsToSwitchData.description}}</div>
+        </div>
+      </div>
+      <div class="reasons-to-switch-next next-prev" (click)="getNext()">  </div>
+      <div class="reasons-to-switch-prev next-prev" (click)="getPrev()">  </div>
+    </div>
+  </div>
+</div>
